@@ -26,11 +26,13 @@ navLinks.forEach(link => {
         navMenu.classList.remove('active');
         
         // Reset hamburger icon
-        const spans = hamburger.querySelectorAll('span');
-        spans.forEach(span => {
-            span.style.transform = 'none';
-            span.style.opacity = '1';
-        });
+        if (hamburger) {
+            const spans = hamburger.querySelectorAll('span');
+            spans.forEach(span => {
+                span.style.transform = 'none';
+                span.style.opacity = '1';
+            });
+        }
     });
 });
 
